@@ -72,7 +72,8 @@ const ChatBot = () => {
     setIsBotTyping(true);
 
     try {
-      const response = await fetch("http://localhost:3001/api/chat", {
+      const response = await fetch("https://task-assistant-chatbot.onrender.com/api/chat", {
+    //   const response = await fetch("http://localhost:3001/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +102,7 @@ const ChatBot = () => {
         ...prev,
         { 
           sender: "bot", 
-          text: "🔌 Oops! I can't reach the server right now. Make sure the backend is running on http://localhost:3001 and try again.", 
+          text: "🔌 Oops! I can't reach the server right now. Make sure the backend is running & try again.", 
           timestamp: new Date(),
           isError: true
         }
@@ -116,7 +117,8 @@ const ChatBot = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/chat", {
+      const response = await fetch("https://task-assistant-chatbot.onrender.com/api/chat", {
+    //   const response = await fetch("http://localhost:3001/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
